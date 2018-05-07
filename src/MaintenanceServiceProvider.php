@@ -19,6 +19,7 @@ class MaintenanceServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '../config/maintenance.php' => config_path('maintenance.php'),
             __DIR__ . '../resources/lang' => resource_path('lang/vendor/maintenance'),
+            __DIR__ . '../resources/views' => resource_path('views/vendor/maintenance'),
         ]);
     }
 
