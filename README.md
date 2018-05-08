@@ -20,7 +20,9 @@ Or add package to require section of composer.json
         ...,
         "baorv/l5-maintenance":"dev-master",
         ...
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 ...
 ```
 
@@ -52,8 +54,7 @@ You can create new view: **resources/view/errors/503.blade.php**
 Run command to publish
 
 ```php
-
-php artisan publish:vendor --provider="Baorv\\Maintenance\\MaintenanceServiceProvider"
+php artisan vendor:publish --provider="Baorv\Maintenance\MaintenanceServiceProvider"
 
 ```
 
