@@ -39,6 +39,15 @@ If you use Laravel >= 5.5, you can skip this step
 ...
 ```
 
+Open **app/Http/Kernel.php** and add middleware to top of $middleware
+
+```php
+protected $middleware = [
+        \App\Http\Middleware\CheckForMaintenanceMode::class,
+        ...
+    ];
+```
+
 ## Maintenance page
 
 You can create new view: **resources/view/errors/503.blade.php**

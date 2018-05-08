@@ -43,7 +43,7 @@ return [
    | It will be compared to $request->route()->getName()
    |
    */
-    'names' => env('MAINTENANCE_NAMES', []),
+    'names' => explode(',', env('MAINTENANCE_NAMES', [])),
 
     /*
    |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
    | It will be compared to Request::is()
    |
    */
-    'excepts' => env('MAINTENANCE_EXCEPTS', []),
+    'excepts' => explode(',', env('MAINTENANCE_EXCEPTS', [])),
 
     /*
    |--------------------------------------------------------------------------
@@ -65,5 +65,5 @@ return [
    | It will be compared to $request->ip()
    |
    */
-    'ips' => env('MAINTENANCE_IPS', []),
+    'ips' => explode(',', env('MAINTENANCE_IPS', [])),
 ];
