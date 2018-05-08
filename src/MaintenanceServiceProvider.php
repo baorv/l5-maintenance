@@ -14,12 +14,12 @@ class MaintenanceServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '../resources/lang', 'maintenance');
-        $this->loadViewsFrom(__DIR__ . '../resources/views', 'maintenance');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'maintenance');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'maintenance');
         $this->publishes([
-            __DIR__ . '../config/maintenance.php' => config_path('maintenance.php'),
-            __DIR__ . '../resources/lang' => resource_path('lang/vendor/maintenance'),
-            __DIR__ . '../resources/views' => resource_path('views/vendor/maintenance'),
+            __DIR__ . '/../config/maintenance.php' => config_path('maintenance.php'),
+            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/maintenance'),
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/maintenance'),
         ]);
     }
 
@@ -31,7 +31,7 @@ class MaintenanceServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '../config/maintenance.php', 'maintenance'
+            __DIR__ . '/../config/maintenance.php', 'maintenance'
         );
     }
 }
