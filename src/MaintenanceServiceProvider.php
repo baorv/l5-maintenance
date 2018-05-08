@@ -1,6 +1,6 @@
 <?php
 
-namespace Baorv\Maintenance\Providers;
+namespace Baorv\Maintenance;
 
 use Illuminate\Support\ServiceProvider;
 
